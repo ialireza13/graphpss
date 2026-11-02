@@ -1,0 +1,114 @@
+# Full experiment plan. <run_name> <seed> [overrides]  or  ! <command>. Runs top to bottom.
+# Main split: 30%-identity sequence clusters (data/splits/cluster30_seed0.json).
+
+# P. Preliminary go/no-go (~6 h GPU). CPU baselines (contact rule, GBT, spectral) run
+#    alongside it outside the queue. Decision questions:
+#    - does a GNN beat the local-contact GBT baseline on the homology-aware split?
+#    - how much accuracy does the random split add (leakage)?
+#    12 epochs each; the paper-scale runs come later and do not reuse these.
+prelim_gatv2      0  model.conv=gatv2 model.layers=2 model.hidden=512 model.heads=4 train.max_epochs=12 train.patience=4
+prelim_gcn        0  model.conv=gcn model.layers=2 model.hidden=2048 train.max_epochs=12 train.patience=4
+prelim_egcn_k2    0  model.conv=expanded_gcn model.hops=2 model.layers=2 model.hidden=2048 train.max_epochs=12 train.patience=4 train.workers=16
+prelim_mlp_pos    0  model.conv=mlp model.fc_layers=3 model.hidden=2048 train.max_epochs=12 train.patience=4
+prelim_gcn_randsplit 0  model.conv=gcn model.layers=2 model.hidden=2048 train.max_epochs=12 train.patience=4 data.split=data/splits/seed0.json
+! python scripts/summarize.py
+prelim_gatv2_randsplit 0  model.conv=gatv2 model.layers=2 model.hidden=512 model.heads=4 train.max_epochs=12 train.patience=4 data.split=data/splits/seed0.json
+! python scripts/summarize.py
+# P2. Added after the first results: GATv2 at 84.0% test sat below the local-contact GBT
+#     (86.4%), which sees sequence separation directly. Give GATv2 edge features for the
+#     separation j - i (clipped at 16), with and without the absolute index embedding.
+prelim_gatv2_relpos 0  model.conv=gatv2 model.layers=2 model.hidden=512 model.heads=4 model.rel_pos=16 train.max_epochs=12 train.patience=4
+prelim_gatv2_relonly 0  model.conv=gatv2 model.layers=2 model.hidden=512 model.heads=4 model.rel_pos=16 model.pos_enc=none train.max_epochs=12 train.patience=4
+! python scripts/summarize.py
+# relonly collapsed to the majority class: with identical node inputs GATv2 (edge features
+# only in attention) keeps every node identical. contacts = node input summed from the
+prelim_gatv2_contacts 0  model.conv=gatv2 model.layers=2 model.hidden=512 model.heads=4 model.rel_pos=16 model.pos_enc=contacts train.max_epochs=12 train.patience=4
+
+# 1. Hyperparameter sweep: 25% of training proteins, 10 epochs, selection on val acc.
+#    All rows use the base.yaml input (contact separations, rel_pos 16), chosen after P2:
+#    prelim_gatv2_contacts reached 90.7% test against 84.0% with the absolute index.
+#    Width 2048 matches PSS-net (4 heads x 512); width 512 is the old baseline setting.
+sweep_gatv2_L2_w512 0 model.conv=gatv2 model.layers=2 model.hidden=128 model.heads=4 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gatv2_L2_w2048 0 model.conv=gatv2 model.layers=2 model.hidden=512 model.heads=4 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gatv2_L3_w512 0 model.conv=gatv2 model.layers=3 model.hidden=128 model.heads=4 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gatv2_L3_w2048 0 model.conv=gatv2 model.layers=3 model.hidden=512 model.heads=4 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gatv2_L4_w512 0 model.conv=gatv2 model.layers=4 model.hidden=128 model.heads=4 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gatv2_L4_w2048 0 model.conv=gatv2 model.layers=4 model.hidden=512 model.heads=4 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gcn_L2_w512 0 model.conv=gcn model.layers=2 model.hidden=512 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gcn_L2_w2048 0 model.conv=gcn model.layers=2 model.hidden=2048 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gcn_L3_w512 0 model.conv=gcn model.layers=3 model.hidden=512 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gcn_L3_w2048 0 model.conv=gcn model.layers=3 model.hidden=2048 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gcn_L4_w512 0 model.conv=gcn model.layers=4 model.hidden=512 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gcn_L4_w2048 0 model.conv=gcn model.layers=4 model.hidden=2048 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gin_L2_w512 0 model.conv=gin model.layers=2 model.hidden=512 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gin_L2_w2048 0 model.conv=gin model.layers=2 model.hidden=2048 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gin_L3_w512 0 model.conv=gin model.layers=3 model.hidden=512 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gin_L3_w2048 0 model.conv=gin model.layers=3 model.hidden=2048 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gin_L4_w512 0 model.conv=gin model.layers=4 model.hidden=512 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gin_L4_w2048 0 model.conv=gin model.layers=4 model.hidden=2048 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_sage_L2_w512 0 model.conv=sage model.layers=2 model.hidden=512 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_sage_L2_w2048 0 model.conv=sage model.layers=2 model.hidden=2048 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_sage_L3_w512 0 model.conv=sage model.layers=3 model.hidden=512 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_sage_L3_w2048 0 model.conv=sage model.layers=3 model.hidden=2048 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_sage_L4_w512 0 model.conv=sage model.layers=4 model.hidden=512 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_sage_L4_w2048 0 model.conv=sage model.layers=4 model.hidden=2048 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k2_L2_w512 0 model.conv=expanded_gcn model.layers=2 model.hidden=512 model.hops=2 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k2_L2_w2048 0 model.conv=expanded_gcn model.layers=2 model.hidden=2048 model.hops=2 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k2_L3_w512 0 model.conv=expanded_gcn model.layers=3 model.hidden=512 model.hops=2 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k2_L3_w2048 0 model.conv=expanded_gcn model.layers=3 model.hidden=2048 model.hops=2 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k2_L4_w512 0 model.conv=expanded_gcn model.layers=4 model.hidden=512 model.hops=2 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k2_L4_w2048 0 model.conv=expanded_gcn model.layers=4 model.hidden=2048 model.hops=2 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k3_L2_w512 0 model.conv=expanded_gcn model.layers=2 model.hidden=512 model.hops=3 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k3_L2_w2048 0 model.conv=expanded_gcn model.layers=2 model.hidden=2048 model.hops=3 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k3_L3_w512 0 model.conv=expanded_gcn model.layers=3 model.hidden=512 model.hops=3 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k3_L3_w2048 0 model.conv=expanded_gcn model.layers=3 model.hidden=2048 model.hops=3 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k3_L4_w512 0 model.conv=expanded_gcn model.layers=4 model.hidden=512 model.hops=3 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_expanded_gcn_k3_L4_w2048 0 model.conv=expanded_gcn model.layers=4 model.hidden=2048 model.hops=3 train.workers=16 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gat_L2_w2048 0 model.conv=gat model.layers=2 model.hidden=512 model.heads=4 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+sweep_gat_L3_w2048 0 model.conv=gat model.layers=3 model.hidden=512 model.heads=4 train.train_fraction=0.25 train.max_epochs=10 train.patience=4 train.eval_train=false
+
+# 2. Pick the best config per architecture and append the final runs below
+! python scripts/select_configs.py configs/full.queue
+
+# ---- appended by scripts/select_configs.py ----
+# selected (val acc): expanded_gcn_k2=sweep_expanded_gcn_k2_L4_w2048_s0 (88.75), expanded_gcn_k3=sweep_expanded_gcn_k3_L4_w2048_s0 (88.98), gat=sweep_gat_L3_w2048_s0 (90.62), gatv2=sweep_gatv2_L4_w512_s0 (90.89), gcn=sweep_gcn_L2_w2048_s0 (85.07), gin=sweep_gin_L2_w2048_s0 (84.90), sage=sweep_sage_L4_w2048_s0 (89.63)
+# A. Final comparison on the cluster split, seed 0, then evaluation
+pssnet_gatv2 0 model.conv=gatv2 model.pos_enc=contacts model.hidden=128 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+gcn 0 model.conv=gcn model.pos_enc=contacts model.hidden=2048 model.layers=2 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+expanded_gcn_k2 0 model.conv=expanded_gcn model.pos_enc=contacts model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=2 model.rel_pos=16 train.max_epochs=20 train.patience=5 train.workers=16
+expanded_gcn_k3 0 model.conv=expanded_gcn model.pos_enc=contacts model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=3 model.rel_pos=16 train.max_epochs=20 train.patience=5 train.workers=16
+gin 0 model.conv=gin model.pos_enc=contacts model.hidden=2048 model.layers=2 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+sage 0 model.conv=sage model.pos_enc=contacts model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+gat 0 model.conv=gat model.pos_enc=contacts model.hidden=512 model.layers=3 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+mlp_pos 0 model.conv=mlp model.fc_layers=3 model.hidden=2048 model.pos_enc=learned model.rel_pos=0 train.max_epochs=20 train.patience=5
+mlp_contacts 0 model.conv=mlp model.fc_layers=3 model.hidden=2048 model.pos_enc=contacts model.rel_pos=16 train.max_epochs=20 train.patience=5
+! python scripts/robustness.py runs/pssnet_gatv2_s0 runs/gcn_s0 runs/expanded_gcn_k2_s0 runs/expanded_gcn_k3_s0 runs/gin_s0 runs/sage_s0 runs/gat_s0 runs/mlp_pos_s0 runs/mlp_contacts_s0
+! python scripts/make_figures.py --run runs/pssnet_gatv2_s0 --out runs/figures
+! python scripts/summarize.py
+! python scripts/summarize.py
+# B. Ablations (seed 0): the original absolute-index input instead of contact separations
+gatv2_abspos 0 model.conv=gatv2 model.pos_enc=learned model.hidden=128 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=0 train.max_epochs=20 train.patience=5
+gcn_abspos 0 model.conv=gcn model.pos_enc=learned model.hidden=2048 model.layers=2 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=0 train.max_epochs=20 train.patience=5
+egcn_k2_abspos 0 model.conv=expanded_gcn model.pos_enc=learned model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=2 model.rel_pos=0 train.max_epochs=20 train.patience=5 train.workers=16
+# Same models on the random (non-homology) split, to measure leakage
+pssnet_gatv2_randsplit 0 model.conv=gatv2 model.pos_enc=contacts model.hidden=128 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5 data.split=data/splits/seed0.json
+gcn_randsplit 0 model.conv=gcn model.pos_enc=contacts model.hidden=2048 model.layers=2 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5 data.split=data/splits/seed0.json
+expanded_gcn_k2_randsplit 0 model.conv=expanded_gcn model.pos_enc=contacts model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=2 model.rel_pos=16 train.max_epochs=20 train.patience=5 train.workers=16 data.split=data/splits/seed0.json
+! python scripts/contact_baselines.py --split data/splits/seed0.json
+! python scripts/summarize.py
+# C. Extra seeds for error bars
+pssnet_gatv2 1 model.conv=gatv2 model.pos_enc=contacts model.hidden=128 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+gcn 1 model.conv=gcn model.pos_enc=contacts model.hidden=2048 model.layers=2 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+expanded_gcn_k2 1 model.conv=expanded_gcn model.pos_enc=contacts model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=2 model.rel_pos=16 train.max_epochs=20 train.patience=5 train.workers=16
+expanded_gcn_k3 1 model.conv=expanded_gcn model.pos_enc=contacts model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=3 model.rel_pos=16 train.max_epochs=20 train.patience=5 train.workers=16
+gin 1 model.conv=gin model.pos_enc=contacts model.hidden=2048 model.layers=2 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+sage 1 model.conv=sage model.pos_enc=contacts model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+mlp_contacts 1 model.conv=mlp model.fc_layers=3 model.hidden=2048 model.pos_enc=contacts model.rel_pos=16 train.max_epochs=20 train.patience=5
+pssnet_gatv2 2 model.conv=gatv2 model.pos_enc=contacts model.hidden=128 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+gcn 2 model.conv=gcn model.pos_enc=contacts model.hidden=2048 model.layers=2 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+expanded_gcn_k2 2 model.conv=expanded_gcn model.pos_enc=contacts model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=2 model.rel_pos=16 train.max_epochs=20 train.patience=5 train.workers=16
+expanded_gcn_k3 2 model.conv=expanded_gcn model.pos_enc=contacts model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=3 model.rel_pos=16 train.max_epochs=20 train.patience=5 train.workers=16
+gin 2 model.conv=gin model.pos_enc=contacts model.hidden=2048 model.layers=2 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+sage 2 model.conv=sage model.pos_enc=contacts model.hidden=2048 model.layers=4 model.heads=4 model.fc_layers=1 model.hops=1 model.rel_pos=16 train.max_epochs=20 train.patience=5
+mlp_contacts 2 model.conv=mlp model.fc_layers=3 model.hidden=2048 model.pos_enc=contacts model.rel_pos=16 train.max_epochs=20 train.patience=5
+! python scripts/summarize.py

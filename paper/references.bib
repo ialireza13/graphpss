@@ -1,0 +1,736 @@
+@article{jacobson2004comparative,
+  title={Comparative protein structure modeling and its applications to drug discovery},
+  author={Jacobson, Matthew and Sali, Andrej},
+  journal={Annu. Rep. Med. Chem},
+  volume={39},
+  number={85},
+  pages={259--274},
+  year={2004},
+  publisher={Inpharmatica Ltd.: London}
+}
+
+@article{jubb2012structural,
+  title={Structural biology and drug discovery for protein--protein interactions},
+  author={Jubb, Harry and Higueruelo, Alicia P and Winter, Anja and Blundell, Tom L},
+  journal={Trends in pharmacological sciences},
+  volume={33},
+  number={5},
+  pages={241--248},
+  year={2012},
+  publisher={Elsevier}
+}
+
+@article{sledz2018protein,
+  title={Protein structure-based drug design: from docking to molecular dynamics},
+  author={{\'S}led{\'z}, Pawe{\l} and Caflisch, Amedeo},
+  journal={Current opinion in structural biology},
+  volume={48},
+  pages={93--102},
+  year={2018},
+  publisher={Elsevier}
+}
+
+@article{alphafold,
+	abstract = {Proteins are essential to life, and understanding their structure can facilitate a mechanistic understanding of their function. Through an enormous experimental effort1--4, the structures of around 100,000 unique proteins have been determined5, but this represents a small fraction of the billions of known protein sequences6,7. Structural coverage is bottlenecked by the months to years of painstaking effort required to determine a single protein structure. Accurate computational approaches are needed to address this gap and to enable large-scale structural bioinformatics. Predicting the three-dimensional structure that a protein will adopt based solely on its amino acid sequence---the structure prediction component of the `protein folding problem'8---has been an important open research problem for more than 50 years9. Despite recent progress10--14, existing methods fall far short of atomic accuracy, especially when no homologous structure is available. Here we provide the first computational method that can regularly predict protein structures with atomic accuracy even in cases in which no similar structure is known. We validated an entirely redesigned version of our neural network-based model, AlphaFold, in the challenging 14th Critical Assessment of protein Structure Prediction (CASP14)15, demonstrating accuracy competitive with experimental structures in a majority of cases and greatly outperforming other methods. Underpinning the latest version of AlphaFold is a novel machine learning approach that incorporates physical and biological knowledge about protein structure, leveraging multi-sequence alignments, into the design of the deep learning algorithm.},
+	author = {Jumper, John and Evans, Richard and Pritzel, Alexander and Green, Tim and Figurnov, Michael and Ronneberger, Olaf and Tunyasuvunakool, Kathryn and Bates, Russ and {\v Z}{\'\i}dek, Augustin and Potapenko, Anna and Bridgland, Alex and Meyer, Clemens and Kohl, Simon A. A. and Ballard, Andrew J. and Cowie, Andrew and Romera-Paredes, Bernardino and Nikolov, Stanislav and Jain, Rishub and Adler, Jonas and Back, Trevor and Petersen, Stig and Reiman, David and Clancy, Ellen and Zielinski, Michal and Steinegger, Martin and Pacholska, Michalina and Berghammer, Tamas and Bodenstein, Sebastian and Silver, David and Vinyals, Oriol and Senior, Andrew W. and Kavukcuoglu, Koray and Kohli, Pushmeet and Hassabis, Demis},
+	da = {2021/08/01},
+	date-added = {2024-05-30 22:16:16 -0400},
+	date-modified = {2024-05-30 22:16:16 -0400},
+	doi = {10.1038/s41586-021-03819-2},
+	id = {Jumper2021},
+	isbn = {1476-4687},
+	journal = {Nature},
+	number = {7873},
+	pages = {583--589},
+	title = {Highly accurate protein structure prediction with AlphaFold},
+	ty = {JOUR},
+	url = {https://doi.org/10.1038/s41586-021-03819-2},
+	volume = {596},
+	year = {2021},
+	Bdsk-Url-1 = {https://doi.org/10.1038/s41586-021-03819-2}}
+
+
+@article{prot_deep,
+	abstract = {Protein structure prediction can be used to determine the three-dimensional shape of a protein from its amino acid sequence1. This problem is of fundamental importance as the structure of a protein largely determines its function2; however, protein structures can be difficult to determine experimentally. Considerable progress has recently been made by leveraging genetic information. It is possible to infer which amino acid residues are in contact by analysing covariation in homologous sequences, which aids in the prediction of protein structures3. Here we show that we can train a neural network to make accurate predictions of the distances between pairs of residues, which convey more information about the structure than contact predictions. Using this information, we construct a potential of mean force4 that can accurately describe the shape of a protein. We find that the resulting potential can be optimized by a simple gradient descent algorithm to generate structures without complex sampling procedures. The resulting system, named AlphaFold, achieves high accuracy, even for sequences with fewer homologous sequences. In the recent Critical Assessment of Protein Structure Prediction5 (CASP13)---a blind assessment of the state of the field---AlphaFold created high-accuracy structures (with template modelling (TM) scores6 of 0.7 or higher) for 24 out of 43 free modelling domains, whereas the next best method, which used sampling and contact information, achieved such accuracy for only 14 out of 43 domains. AlphaFold represents a considerable advance in protein-structure prediction. We expect this increased accuracy to enable insights into the function and malfunction of proteins, especially in cases for which no structures for homologous proteins have been experimentally determined7.},
+	author = {Senior, Andrew W. and Evans, Richard and Jumper, John and Kirkpatrick, James and Sifre, Laurent and Green, Tim and Qin, Chongli and {\v Z}{\'\i}dek, Augustin and Nelson, Alexander W. R. and Bridgland, Alex and Penedones, Hugo and Petersen, Stig and Simonyan, Karen and Crossan, Steve and Kohli, Pushmeet and Jones, David T. and Silver, David and Kavukcuoglu, Koray and Hassabis, Demis},
+	da = {2020/01/01},
+	date-added = {2024-05-30 22:20:38 -0400},
+	date-modified = {2024-05-30 22:20:38 -0400},
+	doi = {10.1038/s41586-019-1923-7},
+	id = {Senior2020},
+	isbn = {1476-4687},
+	journal = {Nature},
+	number = {7792},
+	pages = {706--710},
+	title = {Improved protein structure prediction using potentials from deep learning},
+	ty = {JOUR},
+	url = {https://doi.org/10.1038/s41586-019-1923-7},
+	volume = {577},
+	year = {2020},
+	Bdsk-Url-1 = {https://doi.org/10.1038/s41586-019-1923-7}}
+
+@article{pdb,
+    author = {Berman, Helen M. and Westbrook, John and Feng, Zukang and Gilliland, Gary and Bhat, T. N. and Weissig, Helge and Shindyalov, Ilya N. and Bourne, Philip E.},
+    title = "{The Protein Data Bank}",
+    journal = {Nucleic Acids Research},
+    volume = {28},
+    number = {1},
+    pages = {235-242},
+    year = {2000},
+    month = {01},
+    abstract = "{The Protein Data Bank (PDB; http://www.rcsb.org/pdb/ ) is the single worldwide archive of structural data of biological macromolecules. This paper describes the goals of the PDB, the systems in place for data deposition and access, how to obtain further information, and near-term plans for the future development of the resource.}",
+    issn = {0305-1048},
+    doi = {10.1093/nar/28.1.235},
+    url = {https://doi.org/10.1093/nar/28.1.235},
+    eprint = {https://academic.oup.com/nar/article-pdf/28/1/235/9895144/280235.pdf},
+}
+
+
+
+@article{
+prot_deep_2,
+author = {Minkyung Baek  and Frank DiMaio  and Ivan Anishchenko  and Justas Dauparas  and Sergey Ovchinnikov  and Gyu Rie Lee  and Jue Wang  and Qian Cong  and Lisa N. Kinch  and R. Dustin Schaeffer  and Claudia Millán  and Hahnbeom Park  and Carson Adams  and Caleb R. Glassman  and Andy DeGiovanni  and Jose H. Pereira  and Andria V. Rodrigues  and Alberdina A. van Dijk  and Ana C. Ebrecht  and Diederik J. Opperman  and Theo Sagmeister  and Christoph Buhlheller  and Tea Pavkov-Keller  and Manoj K. Rathinaswamy  and Udit Dalwadi  and Calvin K. Yip  and John E. Burke  and K. Christopher Garcia  and Nick V. Grishin  and Paul D. Adams  and Randy J. Read  and David Baker },
+title = {Accurate prediction of protein structures and interactions using a three-track neural network},
+journal = {Science},
+volume = {373},
+number = {6557},
+pages = {871-876},
+year = {2021},
+doi = {10.1126/science.abj8754},
+URL = {https://www.science.org/doi/abs/10.1126/science.abj8754},
+eprint = {https://www.science.org/doi/pdf/10.1126/science.abj8754},
+abstract = {In 1972, Anfinsen won a Nobel prize for demonstrating a connection between a protein’s amino acid sequence and its three-dimensional structure. Since 1994, scientists have competed in the biannual Critical Assessment of Structure Prediction (CASP) protein-folding challenge. Deep learning methods took center stage at CASP14, with DeepMind’s Alphafold2 achieving remarkable accuracy. Baek et al. explored network architectures based on the DeepMind framework. They used a three-track network to process sequence, distance, and coordinate information simultaneously and achieved accuracies approaching those of DeepMind. The method, RoseTTA fold, can solve challenging x-ray crystallography and cryo–electron microscopy modeling problems and generate accurate models of protein-protein complexes. —VV Protein structure modeling enables the rapid solution of protein structures and provides insights into function. DeepMind presented notably accurate predictions at the recent 14th Critical Assessment of Structure Prediction (CASP14) conference. We explored network architectures that incorporate related ideas and obtained the best performance with a three-track network in which information at the one-dimensional (1D) sequence level, the 2D distance map level, and the 3D coordinate level is successively transformed and integrated. The three-track network produces structure predictions with accuracies approaching those of DeepMind in CASP14, enables the rapid solution of challenging x-ray crystallography and cryo–electron microscopy structure modeling problems, and provides insights into the functions of proteins of currently unknown structure. The network also enables rapid generation of accurate protein-protein complex models from sequence information alone, short-circuiting traditional approaches that require modeling of individual subunits followed by docking. We make the method available to the scientific community to speed biological research.}}
+
+
+@article{DEPRISTO2004831,
+title = {Heterogeneity and Inaccuracy in Protein Structures Solved by X-Ray Crystallography},
+journal = {Structure},
+volume = {12},
+number = {5},
+pages = {831-838},
+year = {2004},
+issn = {0969-2126},
+doi = {https://doi.org/10.1016/j.str.2004.02.031},
+url = {https://www.sciencedirect.com/science/article/pii/S0969212604001145},
+author = {Mark A DePristo and Paul I.W {de Bakker} and Tom L Blundell},
+abstract = {Proteins are dynamic molecules, exhibiting structural heterogeneity in the form of anisotropic motion and discrete conformational substates, often of functional importance. In protein structure determination by X-ray crystallography, the observed diffraction pattern results from the scattering of X-rays by an ensemble of heterogeneous molecules, ordered and oriented by packing in a crystal lattice. The majority of proteins diffract to resolutions where heterogeneity is difficult to identify and model, and are therefore approximated by a single, average conformation with isotropic variance. Here we show that disregarding structural heterogeneity introduces degeneracy into the structure determination process, as many single, isotropic models exist that explain the diffraction data equally well. The large differences among these models imply that the accuracy of crystallographic structures has been widely overestimated. Further, it suggests that analyses that depend on small differences in the relative positions of atoms may be flawed.}
+}
+
+
+@article{cryo,
+	author = {Zhang, Kaiming and Pintilie, Grigore D. and Li, Shanshan and Schmid, Michael F. and Chiu, Wah},
+	da = {2020/12/01},
+	date-added = {2024-05-30 22:28:30 -0400},
+	date-modified = {2024-05-30 22:28:30 -0400},
+	doi = {10.1038/s41422-020-00432-2},
+	id = {Zhang2020},
+	isbn = {1748-7838},
+	journal = {Cell Research},
+	number = {12},
+	pages = {1136--1139},
+	title = {Resolving individual atoms of protein complex by cryo-electron microscopy},
+	ty = {JOUR},
+	url = {https://doi.org/10.1038/s41422-020-00432-2},
+	volume = {30},
+	year = {2020},
+	Bdsk-Url-1 = {https://doi.org/10.1038/s41422-020-00432-2}}
+
+@misc{kipf2017semisupervised,
+      title={Semi-Supervised Classification with Graph Convolutional Networks}, 
+      author={Thomas N. Kipf and Max Welling},
+      year={2017},
+      eprint={1609.02907},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+@misc{veličković2018graph,
+      title={Graph Attention Networks}, 
+      author={Petar Veličković and Guillem Cucurull and Arantxa Casanova and Adriana Romero and Pietro Liò and Yoshua Bengio},
+      year={2018},
+      eprint={1710.10903},
+      archivePrefix={arXiv},
+      primaryClass={stat.ML}
+}
+@misc{xu2019powerful,
+      title={How Powerful are Graph Neural Networks?}, 
+      author={Keyulu Xu and Weihua Hu and Jure Leskovec and Stefanie Jegelka},
+      year={2019},
+      eprint={1810.00826},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+@misc{hashemi2024visiting,
+      title={Visiting Distant Neighbors in Graph Convolutional Networks}, 
+      author={Alireza Hashemi and Hernan Makse},
+      year={2024},
+      eprint={2301.10960},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+@inproceedings{citeseer,
+author = {Giles, C. Lee and Bollacker, Kurt D. and Lawrence, Steve},
+title = {CiteSeer: an automatic citation indexing system},
+year = {1998},
+isbn = {0897919653},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/276675.276685},
+doi = {10.1145/276675.276685},
+booktitle = {Proceedings of the Third ACM Conference on Digital Libraries},
+pages = {89–98},
+numpages = {10},
+location = {Pittsburgh, Pennsylvania, USA},
+series = {DL '98}
+}
+
+@article{cora,
+	abstract = {Domain-specific internet portals are growing in popularity because they gather content from the Web and organize it for easy access, retrieval and search. For example, www.campsearch.com allows complex queries by age, location, cost and specialty over summer camps. This functionality is not possible with general, Web-wide search engines. Unfortunately these portals are difficult and time-consuming to maintain. This paper advocates the use of machine learning techniques to greatly automate the creation and maintenance of domain-specific Internet portals. We describe new research in reinforcement learning, information extraction and text classification that enables efficient spidering, the identification of informative text segments, and the population of topic hierarchies. Using these techniques, we have built a demonstration system: a portal for computer science research papers. It already contains over 50,000 papers and is publicly available at www.cora.justresearch.com. These techniques are widely applicable to portal creation in other domains.},
+	author = {McCallum, Andrew Kachites and Nigam, Kamal and Rennie, Jason and Seymore, Kristie},
+	da = {2000/07/01},
+	date-added = {2024-05-30 22:40:55 -0400},
+	date-modified = {2024-05-30 22:40:55 -0400},
+	doi = {10.1023/A:1009953814988},
+	id = {McCallum2000},
+	isbn = {1573-7659},
+	journal = {Information Retrieval},
+	number = {2},
+	pages = {127--163},
+	title = {Automating the Construction of Internet Portals with Machine Learning},
+	ty = {JOUR},
+	url = {https://doi.org/10.1023/A:1009953814988},
+	volume = {3},
+	year = {2000},
+	Bdsk-Url-1 = {https://doi.org/10.1023/A:1009953814988}}
+
+
+@article{pubmed,
+	abstractnote = {Many real-world applications produce networked data such as the world-wide web (hypertext documents connected via hyperlinks), social networks (for example, people connected by friendship links), communication networks (computers connected via communication links) and biological networks (for example, protein interaction networks). A recent focus in machine learning research has been to extend traditional machine learning classification techniques to classify nodes in such networks. In this article, we provide a brief introduction to this area of research and how it has progressed during the past decade. We introduce four of the most widely used inference algorithms for classifying networked data and empirically compare them on both synthetic and real-world data.},
+	author = {Sen, Prithviraj and Namata, Galileo and Bilgic, Mustafa and Getoor, Lise and Galligher, Brian and Eliassi-Rad, Tina},
+	doi = {10.1609/aimag.v29i3.2157},
+	journal = {AI Magazine},
+	month = {Sep.},
+	number = {3},
+	pages = {93},
+	title = {Collective Classification in Network Data},
+	url = {https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/2157},
+	volume = {29},
+	year = {2008},
+	Bdsk-Url-1 = {https://ojs.aaai.org/aimagazine/index.php/aimagazine/article/view/2157},
+	Bdsk-Url-2 = {https://doi.org/10.1609/aimag.v29i3.2157}}
+
+
+@article{gnnprot,
+	abstract = {Proteins are the essential biological macromolecules required to perform nearly all biological processes, and cellular functions. Proteins rarely carry out their tasks in isolation but interact with other proteins (known as protein--protein interaction) present in their surroundings to complete biological activities. The knowledge of protein--protein interactions (PPIs) unravels the cellular behavior and its functionality. The computational methods automate the prediction of PPI and are less expensive than experimental methods in terms of resources and time. So far, most of the works on PPI have mainly focused on sequence information. Here, we use graph convolutional network (GCN) and graph attention network (GAT) to predict the interaction between proteins by utilizing protein's structural information and sequence features. We build the graphs of proteins from their PDB files, which contain 3D coordinates of atoms. The protein graph represents the amino acid network, also known as residue contact network, where each node is a residue. Two nodes are connected if they have a pair of atoms (one from each node) within the threshold distance. To extract the node/residue features, we use the protein language model. The input to the language model is the protein sequence, and the output is the feature vector for each amino acid of the underlying sequence. We validate the predictive capability of the proposed graph-based approach on two PPI datasets: Human and S. cerevisiae. Obtained results demonstrate the effectiveness of the proposed approach as it outperforms the previous leading methods. The source code for training and data to train the model are available at https://github.com/JhaKanchan15/PPI{\_}GNN.git.},
+	author = {Jha, Kanchan and Saha, Sriparna and Singh, Hiteshi},
+	da = {2022/05/19},
+	date-added = {2024-06-03 00:49:19 -0400},
+	date-modified = {2024-06-03 00:49:19 -0400},
+	doi = {10.1038/s41598-022-12201-9},
+	id = {Jha2022},
+	isbn = {2045-2322},
+	journal = {Scientific Reports},
+	number = {1},
+	pages = {8360},
+	title = {Prediction of protein--protein interaction using graph neural networks},
+	ty = {JOUR},
+	url = {https://doi.org/10.1038/s41598-022-12201-9},
+	volume = {12},
+	year = {2022},
+	Bdsk-Url-1 = {https://doi.org/10.1038/s41598-022-12201-9}}
+
+@article{gnnprot2,
+    author = {Réau, Manon and Renaud, Nicolas and Xue, Li C and Bonvin, Alexandre M J J},
+    title = "{DeepRank-GNN: a graph neural network framework to learn patterns in protein–protein interfaces}",
+    journal = {Bioinformatics},
+    volume = {39},
+    number = {1},
+    pages = {btac759},
+    year = {2022},
+    month = {11},
+    abstract = "{Gaining structural insights into the protein–protein interactome is essential to understand biological phenomena and extract knowledge for rational drug design or protein engineering. We have previously developed DeepRank, a deep-learning framework to facilitate pattern learning from protein–protein interfaces using convolutional neural network (CNN) approaches. However, CNN is not rotation invariant and data augmentation is required to desensitize the network to the input data orientation which dramatically impairs the computation performance. Representing protein–protein complexes as atomic- or residue-scale rotation invariant graphs instead enables using graph neural networks (GNN) approaches, bypassing those limitations.We have developed DeepRank-GNN, a framework that converts protein–protein interfaces from PDB 3D coordinates files into graphs that are further provided to a pre-defined or user-defined GNN architecture to learn problem-specific interaction patterns. DeepRank-GNN is designed to be highly modularizable, easily customized and is wrapped into a user-friendly python3 package. Here, we showcase DeepRank-GNN’s performance on two applications using a dedicated graph interaction neural network: (i) the scoring of docking poses and (ii) the discriminating of biological and crystal interfaces. In addition to the highly competitive performance obtained in those tasks as compared to state-of-the-art methods, we show a significant improvement in speed and storage requirement using DeepRank-GNN as compared to DeepRank.DeepRank-GNN is freely available from https://github.com/DeepRank/DeepRank-GNN.Supplementary data are available at Bioinformatics online.}",
+    issn = {1367-4811},
+    doi = {10.1093/bioinformatics/btac759},
+    url = {https://doi.org/10.1093/bioinformatics/btac759},
+    eprint = {https://academic.oup.com/bioinformatics/article-pdf/39/1/btac759/48448994/btac759.pdf},
+}
+
+
+@article{deepcnf,
+	abstract = {Protein secondary structure (SS) prediction is important for studying protein structure and function. When only the sequence (profile) information is used as input feature, currently the best predictors can obtain \~{}80{\%} Q3 accuracy, which has not been improved in the past decade. Here we present DeepCNF (Deep Convolutional Neural Fields) for protein SS prediction. DeepCNF is a Deep Learning extension of Conditional Neural Fields (CNF), which is an integration of Conditional Random Fields (CRF) and shallow neural networks. DeepCNF can model not only complex sequence-structure relationship by a deep hierarchical architecture, but also interdependency between adjacent SS labels, so it is much more powerful than CNF. Experimental results show that DeepCNF can obtain \~{}84{\%} Q3 accuracy, \~{}85{\%} SOV score and \~{}72{\%} Q8 accuracy, respectively, on the CASP and CAMEO test proteins, greatly outperforming currently popular predictors. As a general framework, DeepCNF can be used to predict other protein structure properties such as contact number, disorder regions and solvent accessibility.},
+	author = {Wang, Sheng and Peng, Jian and Ma, Jianzhu and Xu, Jinbo},
+	da = {2016/01/11},
+	date-added = {2024-06-03 15:36:23 -0400},
+	date-modified = {2024-06-03 15:36:23 -0400},
+	doi = {10.1038/srep18962},
+	id = {Wang2016},
+	isbn = {2045-2322},
+	journal = {Scientific Reports},
+	number = {1},
+	pages = {18962},
+	title = {Protein Secondary Structure Prediction Using Deep Convolutional Neural Fields},
+	ty = {JOUR},
+	url = {https://doi.org/10.1038/srep18962},
+	volume = {6},
+	year = {2016},
+	Bdsk-Url-1 = {https://doi.org/10.1038/srep18962}}
+
+
+@article{jpred,
+    author = {Drozdetskiy, Alexey and Cole, Christian and Procter, James and Barton, Geoffrey J.},
+    title = "{JPred4: a protein secondary structure prediction server}",
+    journal = {Nucleic Acids Research},
+    volume = {43},
+    number = {W1},
+    pages = {W389-W394},
+    year = {2015},
+    month = {04},
+    abstract = "{JPred4 (http://www.compbio.dundee.ac.uk/jpred4) is the latest version of the popular JPred protein secondary structure prediction server which provides predictions by the JNet algorithm, one of the most accurate methods for secondary structure prediction. In addition to protein secondary structure, JPred also makes predictions of solvent accessibility and coiled-coil regions. The JPred service runs up to 94 000 jobs per month and has carried out over 1.5 million predictions in total for users in 179 countries. The JPred4 web server has been re-implemented in the Bootstrap framework and JavaScript to improve its design, usability and accessibility from mobile devices. JPred4 features higher accuracy, with a blind three-state (α-helix, β-strand and coil) secondary structure prediction accuracy of 82.0\\% while solvent accessibility prediction accuracy has been raised to 90\\% for residues \\&lt;5\\% accessible. Reporting of results is enhanced both on the website and through the optional email summaries and batch submission results. Predictions are now presented in SVG format with options to view full multiple sequence alignments with and without gaps and insertions. Finally, the help-pages have been updated and tool-tips added as well as step-by-step tutorials.}",
+    issn = {0305-1048},
+    doi = {10.1093/nar/gkv332},
+    url = {https://doi.org/10.1093/nar/gkv332},
+    eprint = {https://academic.oup.com/nar/article-pdf/43/W1/W389/7476047/gkv332.pdf},
+}
+
+
+@article{jnet,
+author = {Cuff, James A. and Barton, Geoffrey J.},
+title = {Application of multiple sequence alignment profiles to improve protein secondary structure prediction},
+journal = {Proteins: Structure, Function, and Bioinformatics},
+volume = {40},
+number = {3},
+pages = {502-511},
+keywords = {protein, secondary structure prediction, multiple sequence alignment, profiles, PSSM},
+doi = {https://doi.org/10.1002/1097-0134(20000815)40:3<502::AID-PROT170>3.0.CO;2-Q},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/1097-0134%2820000815%2940%3A3%3C502%3A%3AAID-PROT170%3E3.0.CO%3B2-Q},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/1097-0134%2820000815%2940%3A3%3C502%3A%3AAID-PROT170%3E3.0.CO%3B2-Q},
+abstract = {Abstract The effect of training a neural network secondary structure prediction algorithm with different types of multiple sequence alignment profiles derived from the same sequences, is shown to provide a range of accuracy from 70.5\% to 76.4\%. The best accuracy of 76.4\% (standard deviation 8.4\%), is 3.1\% (Q3) and 4.4\% (SOV2) better than the PHD algorithm run on the same set of 406 sequence non-redundant proteins that were not used to train either method. Residues predicted by the new method with a confidence value of 5 or greater, have an average Q3 accuracy of 84\%, and cover 68\% of the residues. Relative solvent accessibility based on a two state model, for 25, 5, and 0\% accessibility are predicted at 76.2, 79.8, and 86.6\% accuracy respectively. The source of the improvements obtained from training with different representations of the same alignment data are described in detail. The new Jnet prediction method resulting from this study is available in the Jpred secondary structure prediction server, and as a stand-alone computer program from: http://barton.ebi.ac.uk/. Proteins 2000;40:502–511. © 2000 Wiley-Liss, Inc.},
+year = {2000}
+}
+
+@article{
+lupas,
+author = {Andrei Lupas  and Marc Van Dyke  and Jeff Stock },
+title = {Predicting Coiled Coils from Protein Sequences},
+journal = {Science},
+volume = {252},
+number = {5009},
+pages = {1162-1164},
+year = {1991},
+doi = {10.1126/science.252.5009.1162},
+URL = {https://www.science.org/doi/abs/10.1126/science.252.5009.1162},
+eprint = {https://www.science.org/doi/pdf/10.1126/science.252.5009.1162},
+abstract = {The probability that a residue in a protein is part of a coiled-coil structure was assessed by comparison of its flanking sequences with sequences of known coiled-coil proteins. This method was used to delineate coiled-coil domains in otherwise globular proteins, such as the leucine zipper domains in transcriptional regulators, and to predict regions of discontinuity within coiled-coil structures, such as the hinge region in myosin. More than 200 proteins that probably have coiled-coil domains were identified in GenBank, including α- and β-tubulins, flagellins, G protein β subunits, some bacterial transfer RNA synthetases, and members of the heat shock protein (Hsp70) family.}}
+
+@article{
+seqalone,
+author = {David Baker  and Andrej Sali },
+title = {Protein Structure Prediction and Structural Genomics},
+journal = {Science},
+volume = {294},
+number = {5540},
+pages = {93-96},
+year = {2001},
+doi = {10.1126/science.1065659},
+URL = {https://www.science.org/doi/abs/10.1126/science.1065659},
+eprint = {https://www.science.org/doi/pdf/10.1126/science.1065659},
+abstract = {Genome sequencing projects are producing linear amino acid sequences, but full understanding of the biological role of these proteins will require knowledge of their structure and function. Although experimental structure determination methods are providing high-resolution structure information about a subset of the proteins, computational structure prediction methods will provide valuable information for the large fraction of sequences whose structures will not be determined experimentally. The first class of protein structure prediction methods, including threading and comparative modeling, rely on detectable similarity spanning most of the modeled sequence and at least one known structure. The second class of methods, de novo or ab initio methods, predict the structure from sequence alone, without relying on similarity at the fold level between the modeled sequence and any of the known structures. In this Viewpoint, we begin by describing the essential features of the methods, the accuracy of the models, and their application to the prediction and understanding of protein function, both for single proteins and on the scale of whole genomes. We then discuss the important role that protein structure prediction methods play in the growing worldwide effort in structural genomics.}}
+
+@article{
+foldprob,
+author = {Ken A. Dill  and Justin L. MacCallum },
+title = {The Protein-Folding Problem, 50 Years On},
+journal = {Science},
+volume = {338},
+number = {6110},
+pages = {1042-1046},
+year = {2012},
+doi = {10.1126/science.1219021},
+URL = {https://www.science.org/doi/abs/10.1126/science.1219021},
+eprint = {https://www.science.org/doi/pdf/10.1126/science.1219021},
+abstract = {Fifty years ago the Nobel Prize in chemistry was awarded to Max Perutz and John Kendrew for determining the structure of globular proteins. Since first viewing their structure of myoglobin, scientists have sought to understand protein folding. Dill and MacCallum (p. 1042) review the progress that has been made on three central questions: What is the code that relates sequence to structure? How do proteins fold so fast? Can protein structure be computationally predicted? While we have come some way toward answering these questions, new questions have been gene rated. It is no longer useful to talk about “solving the protein-folding problem”—protein folding has grown into a field of research where the next 50 years promise to be as exciting as the last. The protein-folding problem was first posed about one half-century ago. The term refers to three broad questions: (i) What is the physical code by which an amino acid sequence dictates a protein’s native structure? (ii) How can proteins fold so fast? (iii) Can we devise a computer algorithm to predict protein structures from their sequences? We review progress on these problems. In a few cases, computer simulations of the physical forces in chemically detailed models have now achieved the accurate folding of small proteins. We have learned that proteins fold rapidly because random thermal motions cause conformational changes leading energetically downhill toward the native structure, a principle that is captured in funnel-shaped energy landscapes. And thanks in part to the large Protein Data Bank of known structures, predicting protein structures is now far more successful than was thought possible in the early days. What began as three questions of basic science one half-century ago has now grown into the full-fledged research field of protein physical science.}}
+
+
+@article{pssp,
+	annote = {doi: 10.1016/j.csbj.2022.11.012},
+	author = {Ismi, Dewi Pramudi and Pulungan, Reza and Afiahayati},
+	booktitle = {Computational and Structural Biotechnology Journal},
+	date = {2022/01/01},
+	date-added = {2024-06-03 17:58:58 -0400},
+	date-modified = {2024-06-03 17:58:58 -0400},
+	doi = {10.1016/j.csbj.2022.11.012},
+	isbn = {2001-0370},
+	journal = {Computational and Structural Biotechnology Journal},
+	m3 = {doi: 10.1016/j.csbj.2022.11.012},
+	month = {2024/06/03},
+	pages = {6271--6286},
+	publisher = {Elsevier},
+	title = {Deep learning for protein secondary structure prediction: Pre and post-AlphaFold},
+	ty = {JOUR},
+	url = {https://doi.org/10.1016/j.csbj.2022.11.012},
+	volume = {20},
+	year = {2022},
+	year1 = {2022},
+	Bdsk-Url-1 = {https://doi.org/10.1016/j.csbj.2022.11.012}}
+
+@article{dssp,
+author = {Kabsch, Wolfgang and Sander, Christian},
+title = {Dictionary of protein secondary structure: Pattern recognition of hydrogen-bonded and geometrical features},
+journal = {Biopolymers},
+volume = {22},
+number = {12},
+pages = {2577-2637},
+doi = {https://doi.org/10.1002/bip.360221211},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/bip.360221211},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/bip.360221211},
+abstract = {Abstract For a successful analysis of the relation between amino acid sequence and protein structure, an unambiguous and physically meaningful definition of secondary structure is essential. We have developed a set of simple and physically motivated criteria for secondary structure, programmed as a pattern-recognition process of hydrogen-bonded and geometrical features extracted from x-ray coordinates. Cooperative secondary structure is recognized as repeats of the elementary hydrogen-bonding patterns “turn” and “bridge.” Repeating turns are “helices,” repeating bridges are “ladders,” connected ladders are “sheets.” Geometric structure is defined in terms of the concepts torsion and curvature of differential geometry. Local chain “chirality” is the torsional handedness of four consecutive Cα positions and is positive for right-handed helices and negative for ideal twisted β-sheets. Curved pieces are defined as “bends.” Solvent “exposure” is given as the number of water molecules in possible contact with a residue. The end result is a compilation of the primary structure, including SS bonds, secondary structure, and solvent exposure of 62 different globular proteins. The presentation is in linear form: strip graphs for an overall view and strip tables for the details of each of 10.925 residues. The dictionary is also available in computer-readable form for protein structure prediction work.},
+year = {1983}
+}
+
+@INPROCEEDINGS{pssgnn,
+  author={Nahid, Tamzid Hasan and Jui, Farjana Akter and Shill, Pintu Chandra},
+  booktitle={2021 5th International Conference on Electrical Information and Communication Technology (EICT)}, 
+  title={Protein Secondary Structure Prediction using Graph Neural Network}, 
+  year={2021},
+  volume={},
+  number={},
+  pages={1-6},
+  keywords={Proteins;Support vector machines;Simulation;DNA;Amino acids;Graph neural networks;Encoding;Bioinformatics;protein secondary structure prediction (PSSP);graph neural network (GNN)},
+  doi={10.1109/EICT54103.2021.9733590}}
+
+@article{weisfeiler1968reduction,
+  title={The reduction of a graph to canonical form and the algebra which appears therein},
+  author={Weisfeiler, Boris and Leman, Andrei},
+  journal={nti, Series},
+  volume={2},
+  number={9},
+  pages={12--16},
+  year={1968}
+}
+
+@article{attention,
+  author       = {Ashish Vaswani and
+                  Noam Shazeer and
+                  Niki Parmar and
+                  Jakob Uszkoreit and
+                  Llion Jones and
+                  Aidan N. Gomez and
+                  Lukasz Kaiser and
+                  Illia Polosukhin},
+  title        = {Attention Is All You Need},
+  journal      = {CoRR},
+  volume       = {abs/1706.03762},
+  year         = {2017},
+  url          = {http://arxiv.org/abs/1706.03762},
+  eprinttype    = {arXiv},
+  eprint       = {1706.03762},
+  timestamp    = {Sat, 23 Jan 2021 01:20:40 +0100},
+  biburl       = {https://dblp.org/rec/journals/corr/VaswaniSPUJGKP17.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
+}
+
+@misc{bronstein2021geometric,
+      title={Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges}, 
+      author={Michael M. Bronstein and Joan Bruna and Taco Cohen and Petar Veličković},
+      year={2021},
+      eprint={2104.13478},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+@misc{brody2022attentivegraphattentionnetworks,
+      title={How Attentive are Graph Attention Networks?}, 
+      author={Shaked Brody and Uri Alon and Eran Yahav},
+      year={2022},
+      eprint={2105.14491},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2105.14491}, 
+}
+
+@article{park2000toward,
+  title={Toward an energy function for the contact map representation of proteins},
+  author={Park, Kibeom and Vendruscolo, Michele and Domany, Eytan},
+  journal={Proteins: Structure, Function, and Bioinformatics},
+  volume={40},
+  number={2},
+  pages={237--248},
+  year={2000},
+  publisher={Wiley Online Library}
+}
+
+@article{cryomap,
+	abstract = {Although structures determined at near-atomic resolution are now routinely reported by cryo-electron microscopy (cryo-EM), many density maps are determined at an intermediate resolution, and extracting structure information from these maps is still a challenge. We report a computational method, Emap2sec, that identifies the secondary structures of proteins (α-helices, β-sheets and other structures) in EM maps at resolutions of between 5 and 10 {\AA}. Emap2sec uses a three-dimensional deep convolutional neural network to assign secondary structure to each grid point in an EM map. We tested Emap2sec on EM maps simulated from 34 structures at resolutions of 6.0 and 10.0 {\AA}, as well as on 43 maps determined experimentally at resolutions of between 5.0 and 9.5 {\AA}. Emap2sec was able to clearly identify the secondary structures in many maps tested, and showed substantially better performance than existing methods.},
+	author = {Maddhuri Venkata Subramaniya, Sai Raghavendra and Terashi, Genki and Kihara, Daisuke},
+	da = {2019/09/01},
+	date-added = {2024-07-15 15:23:31 -0400},
+	date-modified = {2024-07-15 15:23:31 -0400},
+	doi = {10.1038/s41592-019-0500-1},
+	id = {Maddhuri Venkata Subramaniya2019},
+	isbn = {1548-7105},
+	journal = {Nature Methods},
+	number = {9},
+	pages = {911--917},
+	title = {Protein secondary structure detection in intermediate-resolution cryo-EM maps using deep learning},
+	ty = {JOUR},
+	url = {https://doi.org/10.1038/s41592-019-0500-1},
+	volume = {16},
+	year = {2019},
+	Bdsk-Url-1 = {https://doi.org/10.1038/s41592-019-0500-1}}
+
+
+@article{gnn-prot,
+	abstract = {The rapid increase in the number of proteins in sequence databases and the diversity of their functions challenge computational approaches for automated function prediction. Here, we introduce DeepFRI, a Graph Convolutional Network for predicting protein functions by leveraging sequence features extracted from a protein language model and protein structures. It outperforms current leading methods and sequence-based Convolutional Neural Networks and scales to the size of current sequence repositories. Augmenting the training set of experimental structures with homology models allows us to significantly expand the number of predictable functions. DeepFRI has significant de-noising capability, with only a minor drop in performance when experimental structures are replaced by protein models. Class activation mapping allows function predictions at an unprecedented resolution, allowing site-specific annotations at the residue-level in an automated manner. We show the utility and high performance of our method by annotating structures from the PDB and SWISS-MODEL, making several new confident function predictions. DeepFRI is available as a webserver at https://beta.deepfri.flatironinstitute.org/.},
+	author = {Gligorijevi{\'c}, Vladimir and Renfrew, P. Douglas and Kosciolek, Tomasz and Leman, Julia Koehler and Berenberg, Daniel and Vatanen, Tommi and Chandler, Chris and Taylor, Bryn C. and Fisk, Ian M. and Vlamakis, Hera and Xavier, Ramnik J. and Knight, Rob and Cho, Kyunghyun and Bonneau, Richard},
+	da = {2021/05/26},
+	date-added = {2024-07-15 15:47:52 -0400},
+	date-modified = {2024-07-15 15:47:52 -0400},
+	doi = {10.1038/s41467-021-23303-9},
+	id = {Gligorijevi{\'c}2021},
+	isbn = {2041-1723},
+	journal = {Nature Communications},
+	number = {1},
+	pages = {3168},
+	title = {Structure-based protein function prediction using graph convolutional networks},
+	ty = {JOUR},
+	url = {https://doi.org/10.1038/s41467-021-23303-9},
+	volume = {12},
+	year = {2021},
+	Bdsk-Url-1 = {https://doi.org/10.1038/s41467-021-23303-9}}
+
+@article{10.1093/bioinformatics/bti1007,
+    author = {Borgwardt, Karsten M. and Ong, Cheng Soon and Schönauer, Stefan and Vishwanathan, S. V. N. and Smola, Alex J. and Kriegel, Hans-Peter},
+    title = "{Protein function prediction via graph kernels}",
+    journal = {Bioinformatics},
+    volume = {21},
+    number = {suppl\_1},
+    pages = {i47-i56},
+    year = {2005},
+    month = {06},
+    abstract = "{Motivation: Computational approaches to protein function prediction infer protein function by finding proteins with similar sequence, structure, surface clefts, chemical properties, amino acid motifs, interaction partners or phylogenetic profiles. We present a new approach that combines sequential, structural and chemical information into one graph model of proteins. We predict functional class membership of enzymes and non-enzymes using graph kernels and support vector machine classification on these protein graphs.Results: Our graph model, derivable from protein sequence and structure only, is competitive with vector models that require additional protein information, such as the size of surface pockets. If we include this extra information into our graph model, our classifier yields significantly higher accuracy levels than the vector models. Hyperkernels allow us to select and to optimally combine the most relevant node attributes in our protein graphs. We have laid the foundation for a protein function prediction system that integrates protein information from various sources efficiently and effectively.Availability: More information available via www.dbs.ifi.lmu.de/Mitarbeiter/borgwardt.html.Contact:  borgwardt@dbs.ifi.lmu.de}",
+    issn = {1367-4803},
+    doi = {10.1093/bioinformatics/bti1007},
+    url = {https://doi.org/10.1093/bioinformatics/bti1007},
+}
+
+@article{goterms,
+	abstract = {Genomic sequencing has made it clear that a large fraction of the genes specifying the core biological functions are shared by all eukaryotes. Knowledge of the biological role of such shared proteins in one organism can often be transferred to other organisms. The goal of the Gene Ontology Consortium is to produce a dynamic, controlled vocabulary that can be applied to all eukaryotes even as knowledge of gene and protein roles in cells is accumulating and changing. To this end, three independent ontologies accessible on the World-Wide Web (http://www.geneontology.org) are being constructed: biological process, molecular function and cellular component.},
+	author = {Ashburner, Michael and Ball, Catherine A. and Blake, Judith A. and Botstein, David and Butler, Heather and Cherry, J. Michael and Davis, Allan P. and Dolinski, Kara and Dwight, Selina S. and Eppig, Janan T. and Harris, Midori A. and Hill, David P. and Issel-Tarver, Laurie and Kasarskis, Andrew and Lewis, Suzanna and Matese, John C. and Richardson, Joel E. and Ringwald, Martin and Rubin, Gerald M. and Sherlock, Gavin},
+	da = {2000/05/01},
+	date-added = {2024-07-15 17:37:34 -0400},
+	date-modified = {2024-07-15 17:37:34 -0400},
+	doi = {10.1038/75556},
+	id = {Ashburner2000},
+	isbn = {1546-1718},
+	journal = {Nature Genetics},
+	number = {1},
+	pages = {25--29},
+	title = {Gene Ontology: tool for the unification of biology},
+	ty = {JOUR},
+	url = {https://doi.org/10.1038/75556},
+	volume = {25},
+	year = {2000},
+	Bdsk-Url-1 = {https://doi.org/10.1038/75556}}
+
+@misc{loshchilov2017sgdrstochasticgradientdescent,
+      title={SGDR: Stochastic Gradient Descent with Warm Restarts}, 
+      author={Ilya Loshchilov and Frank Hutter},
+      year={2017},
+      eprint={1608.03983},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/1608.03983}, 
+}
+
+@misc{kingma2017adammethodstochasticoptimization,
+      title={Adam: A Method for Stochastic Optimization}, 
+      author={Diederik P. Kingma and Jimmy Ba},
+      year={2017},
+      eprint={1412.6980},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/1412.6980}, 
+}
+
+@article{paszke2019pytorch,
+title={PyTorch: An Imperative Style, High-Performance Deep Learning Library},
+author={Paszke, Adam and Gross, Sam and Massa, Francisco and Lerer, Adam and Bradbury, James and Chanan, Gregory and Killeen, Trevor and Lin, Zeming and Gimelshein, Natalia and Antiga, Luca and Desmaison, Alban and Kopf, Andreas and Yang, Edward and DeVito, Zachary and Raison, Martin and Tejani, Alykhan and Chilamkurthy, Sasank and Steiner, Benoit and Fang, Lu and Bai, Junjie and Chintala, Soumith},
+journal={arXiv preprint arXiv:1912.01703},
+year={2019}
+}
+
+@article{Carlson_Betteridge_Kisiel_Settles_Hruschka_Mitchell_2010,
+	abstractnote = {&lt;p&gt; We consider here the problem of building a never-ending language learner; that is, an intelligent computer agent that runs forever and that each day must (1) extract, or read, information from the web to populate a growing structured knowledge base, and (2) learn to perform this task better than on the previous day. In particular, we propose an approach and a set of design principles for such an agent, describe a partial implementation of such a system that has already learned to extract a knowledge base containing over 242,000 beliefs with an estimated precision of 74% after running for 67 days, and discuss lessons learned from this preliminary attempt to build a never-ending learning agent. &lt;/p&gt;},
+	author = {Carlson, Andrew and Betteridge, Justin and Kisiel, Bryan and Settles, Burr and Hruschka, Estevam and Mitchell, Tom},
+	doi = {10.1609/aaai.v24i1.7519},
+	journal = {Proceedings of the AAAI Conference on Artificial Intelligence},
+	month = {Jul.},
+	number = {1},
+	pages = {1306-1313},
+	title = {Toward an Architecture for Never-Ending Language Learning},
+	url = {https://ojs.aaai.org/index.php/AAAI/article/view/7519},
+	volume = {24},
+	year = {2010},
+	Bdsk-Url-1 = {https://ojs.aaai.org/index.php/AAAI/article/view/7519},
+	Bdsk-Url-2 = {https://doi.org/10.1609/aaai.v24i1.7519}}
+
+@inproceedings{Perozzi_2014, series={KDD ’14},
+   title={DeepWalk: online learning of social representations},
+   url={http://dx.doi.org/10.1145/2623330.2623732},
+   DOI={10.1145/2623330.2623732},
+   booktitle={Proceedings of the 20th ACM SIGKDD international conference on Knowledge discovery and data mining},
+   publisher={ACM},
+   author={Perozzi, Bryan and Al-Rfou, Rami and Skiena, Steven},
+   year={2014},
+   month=aug, collection={KDD ’14} }
+
+
+@article{sc,
+	abstract = {Social media has reshaped the way in which people interact with each other. The rapid development of participatory web and social networking sites like YouTube, Twitter, and Facebook, also brings about many data mining opportunities and novel challenges. In particular, we focus on classification tasks with user interaction information in a social network. Networks in social media are heterogeneous, consisting of various relations. Since the relation-type information may not be available in social media, most existing approaches treat these inhomogeneous connections homogeneously, leading to an unsatisfactory classification performance. In order to handle the network heterogeneity, we propose the concept of social dimension to represent actors'latent affiliations, and develop a classification framework based on that. The proposed framework, SocioDim, first extracts social dimensions based on the network structure to accurately capture prominent interaction patterns between actors, then learns a discriminative classifier to select relevant social dimensions. SocioDim, by differentiating different types of network connections, outperforms existing representative methods of classification in social media, and offers a simple yet effective approach to integrating two types of seemingly orthogonal information: the network of actors and their attributes.},
+	author = {Tang, Lei and Liu, Huan},
+	da = {2011/11/01},
+	date-added = {2024-07-16 11:46:06 -0400},
+	date-modified = {2024-07-16 11:46:06 -0400},
+	doi = {10.1007/s10618-010-0210-x},
+	id = {Tang2011},
+	isbn = {1573-756X},
+	journal = {Data Mining and Knowledge Discovery},
+	number = {3},
+	pages = {447--478},
+	title = {Leveraging social media networks for classification},
+	ty = {JOUR},
+	url = {https://doi.org/10.1007/s10618-010-0210-x},
+	volume = {23},
+	year = {2011},
+	Bdsk-Url-1 = {https://doi.org/10.1007/s10618-010-0210-x}
+}
+
+@article{tsne,
+  author  = {Laurens van der Maaten and Geoffrey Hinton},
+  title   = {Visualizing Data using t-SNE},
+  journal = {Journal of Machine Learning Research},
+  year    = {2008},
+  volume  = {9},
+  number  = {86},
+  pages   = {2579--2605},
+  url     = {http://jmlr.org/papers/v9/vandermaaten08a.html}
+}
+
+@article{kuhn,
+author = {Kuhn, H. W.},
+title = {The Hungarian method for the assignment problem},
+journal = {Naval Research Logistics Quarterly},
+volume = {2},
+number = {1-2},
+pages = {83-97},
+doi = {https://doi.org/10.1002/nav.3800020109},
+url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/nav.3800020109},
+eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1002/nav.3800020109},
+abstract = {Abstract Assuming that numerical scores are available for the performance of each of n persons on each of n jobs, the “assignment problem” is the quest for an assignment of persons to jobs so that the sum of the n scores so obtained is as large as possible. It is shown that ideas latent in the work of two Hungarian mathematicians may be exploited to yield a new method of solving this problem.},
+year = {1955}
+}
+
+@misc{chen2023uncertaintyawarerobustlearningnoisy,
+      title={Uncertainty-Aware Robust Learning on Noisy Graphs}, 
+      author={Shuyi Chen and Kaize Ding and Shixiang Zhu},
+      year={2023},
+      eprint={2306.08210},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2306.08210}, 
+}
+@article{labesse1997psea,
+  title={{P-SEA}: a new efficient assignment of secondary structure from {C}$\alpha$ trace of proteins},
+  author={Labesse, Gilles and Colloc'h, Nathalie and Pothier, Jo{\"e}l and Mornon, Jean-Paul},
+  journal={Computer Applications in the Biosciences},
+  volume={13},
+  number={3},
+  pages={291--295},
+  year={1997}
+}
+@article{law2014pcasso,
+  title={{PCASSO}: a fast and efficient {C}$\alpha$-based method for accurately assigning protein secondary structure elements},
+  author={Law, Sean M. and Frank, Aaron T. and Brooks, Charles L.},
+  journal={Journal of Computational Chemistry},
+  volume={35},
+  number={24},
+  pages={1757--1761},
+  year={2014}
+}
+@article{steinegger2017mmseqs2,
+  title={{MMseqs2} enables sensitive protein sequence searching for the analysis of massive data sets},
+  author={Steinegger, Martin and S{\"o}ding, Johannes},
+  journal={Nature Biotechnology},
+  volume={35},
+  number={11},
+  pages={1026--1028},
+  year={2017}
+}
+@inproceedings{hamilton2017sage,
+  title={Inductive Representation Learning on Large Graphs},
+  author={Hamilton, William L. and Ying, Rex and Leskovec, Jure},
+  booktitle={Advances in Neural Information Processing Systems},
+  volume={30},
+  year={2017}
+}
+@article{pedregosa2011sklearn,
+  title={Scikit-learn: Machine Learning in {P}ython},
+  author={Pedregosa, Fabian and others},
+  journal={Journal of Machine Learning Research},
+  volume={12},
+  pages={2825--2830},
+  year={2011}
+}
+
+@article{vendruscolo1997recovery,
+  title={Recovery of protein structure from contact maps},
+  author={Vendruscolo, Michele and Kussell, Edo and Domany, Eytan},
+  journal={Folding and Design},
+  volume={2},
+  number={5},
+  pages={295--306},
+  year={1997}
+}
+@article{morcos2011direct,
+  title={Direct-coupling analysis of residue coevolution captures native contacts across many protein families},
+  author={Morcos, Faruck and others},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={108},
+  number={49},
+  pages={E1293--E1301},
+  year={2011}
+}
+@article{pauling1951structure,
+  title={The structure of proteins: two hydrogen-bonded helical configurations of the polypeptide chain},
+  author={Pauling, Linus and Corey, Robert B. and Branson, H. R.},
+  journal={Proceedings of the National Academy of Sciences},
+  volume={37},
+  number={4},
+  pages={205--211},
+  year={1951}
+}
+@article{rost1999twilight,
+  title={Twilight zone of protein sequence alignments},
+  author={Rost, Burkhard},
+  journal={Protein Engineering},
+  volume={12},
+  number={2},
+  pages={85--94},
+  year={1999}
+}
+@article{kapoor2023leakage,
+  title={Leakage and the reproducibility crisis in machine-learning-based science},
+  author={Kapoor, Sayash and Narayanan, Arvind},
+  journal={Patterns},
+  volume={4},
+  number={9},
+  pages={100804},
+  year={2023}
+}
+@inproceedings{hu2020open,
+  title={Open Graph Benchmark: Datasets for Machine Learning on Graphs},
+  author={Hu, Weihua and Fout, Alex and Zitnik, Marinka and Dong, Bowen and Ren, Hongyu and Liu, Bowen and Catasta, Michele and Leskovec, Jure},
+  booktitle={Advances in Neural Information Processing Systems},
+  volume={33},
+  year={2020}
+}

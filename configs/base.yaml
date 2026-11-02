@@ -1,0 +1,31 @@
+# PSS-net (GATv2): 2 GATv2 layers x 4 heads x 512, then 2048 -> 512 -> 3. Since the
+# preliminary runs the input is translation-invariant: each residue starts from the sum of
+# embeddings of its contacts' sequence separations, and GAT edges carry the separation.
+# The original paper model is pos_enc=learned rel_pos=0.
+name: pssnet_gatv2
+runs_dir: runs
+data:
+  store: data/graphpss.npz
+  split: data/splits/cluster30_seed0.json  # homology-aware 80/10/10 (scripts/make_cluster_split.py)
+  hops: data/hops                           # precomputed k-hop pairs (scripts/build_hops.py)
+model:
+  conv: gatv2          # gatv2 | gat | gcn | gin | sage | expanded_gcn | mlp
+  pos_enc: contacts    # contacts | learned | sinusoidal | none
+  rel_pos: 16          # clip for sequence separations |j - i| (0 = off; contacts needs > 0)
+  in_dim: 32
+  hidden: 512
+  layers: 2
+  heads: 4
+  fc_layers: 1
+  hops: 1              # expanded_gcn only: neighbourhood order K
+  dropout: 0.0
+train:
+  batch_size: 32
+  lr: 1.0e-3
+  eta_min: 1.0e-4
+  clip: 1.0
+  max_epochs: 50
+  patience: 10
+  max_hours: 4
+  amp: true
+  workers: 8

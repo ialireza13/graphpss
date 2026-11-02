@@ -1,0 +1,17 @@
+{
+  "identity": 30,
+  "entries": 172891,
+  "not_in_cluster_file": 285,
+  "groups": 21700,
+  "largest_group_node_frac": 0.015898964293245763,
+  "graphs": {
+    "train": 137636,
+    "val": 17385,
+    "test": 17870
+  },
+  "node_frac": {
+    "train": 0.7995125312937935,
+    "val": 0.09995871139467882,
+    "test": 0.1005287573115277
+  }
+}

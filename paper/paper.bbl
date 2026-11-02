@@ -1,0 +1,583 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{34}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\url{https://doi.org/#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\bibcommenthead
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{McCallum et~al.}{2000}]{cora}
+\begin{barticle}
+\bauthor{\bsnm{McCallum}, \binits{A.K.}},
+\bauthor{\bsnm{Nigam}, \binits{K.}},
+\bauthor{\bsnm{Rennie}, \binits{J.}},
+\bauthor{\bsnm{Seymore}, \binits{K.}}:
+\batitle{Automating the construction of internet portals with machine
+  learning}.
+\bjtitle{Information Retrieval}
+\bvolume{3}(\bissue{2}),
+\bfpage{127}--\blpage{163}
+(\byear{2000})
+\doiurl{10.1023/A:1009953814988}
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Giles et~al.}{1998}]{citeseer}
+\begin{bchapter}
+\bauthor{\bsnm{Giles}, \binits{C.L.}},
+\bauthor{\bsnm{Bollacker}, \binits{K.D.}},
+\bauthor{\bsnm{Lawrence}, \binits{S.}}:
+\bctitle{Citeseer: an automatic citation indexing system}.
+In: \bbtitle{Proceedings of the Third ACM Conference on Digital Libraries}.
+\bsertitle{DL '98},
+pp. \bfpage{89}--\blpage{98}.
+\bpublisher{Association for Computing Machinery},
+\blocation{New York, NY, USA}
+(\byear{1998}).
+\doiurl{10.1145/276675.276685} .
+\burl{https://doi.org/10.1145/276675.276685}
+\end{bchapter}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Sen et~al.}{2008}]{pubmed}
+\begin{barticle}
+\bauthor{\bsnm{Sen}, \binits{P.}},
+\bauthor{\bsnm{Namata}, \binits{G.}},
+\bauthor{\bsnm{Bilgic}, \binits{M.}},
+\bauthor{\bsnm{Getoor}, \binits{L.}},
+\bauthor{\bsnm{Galligher}, \binits{B.}},
+\bauthor{\bsnm{Eliassi-Rad}, \binits{T.}}:
+\batitle{Collective classification in network data}.
+\bjtitle{AI Magazine}
+\bvolume{29}(\bissue{3}),
+\bfpage{93}
+(\byear{2008})
+\doiurl{10.1609/aimag.v29i3.2157}
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Hu et~al.}{2020}]{hu2020open}
+\begin{bchapter}
+\bauthor{\bsnm{Hu}, \binits{W.}},
+\bauthor{\bsnm{Fout}, \binits{A.}},
+\bauthor{\bsnm{Zitnik}, \binits{M.}},
+\bauthor{\bsnm{Dong}, \binits{B.}},
+\bauthor{\bsnm{Ren}, \binits{H.}},
+\bauthor{\bsnm{Liu}, \binits{B.}},
+\bauthor{\bsnm{Catasta}, \binits{M.}},
+\bauthor{\bsnm{Leskovec}, \binits{J.}}:
+\bctitle{Open graph benchmark: Datasets for machine learning on graphs}.
+In: \bbtitle{Advances in Neural Information Processing Systems},
+vol. \bseriesno{33}
+(\byear{2020})
+\end{bchapter}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Hamilton et~al.}{2017}]{hamilton2017sage}
+\begin{bchapter}
+\bauthor{\bsnm{Hamilton}, \binits{W.L.}},
+\bauthor{\bsnm{Ying}, \binits{R.}},
+\bauthor{\bsnm{Leskovec}, \binits{J.}}:
+\bctitle{Inductive representation learning on large graphs}.
+In: \bbtitle{Advances in Neural Information Processing Systems},
+vol. \bseriesno{30}
+(\byear{2017})
+\end{bchapter}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Berman et~al.}{2000}]{pdb}
+\begin{barticle}
+\bauthor{\bsnm{Berman}, \binits{H.M.}},
+\bauthor{\bsnm{Westbrook}, \binits{J.}},
+\bauthor{\bsnm{Feng}, \binits{Z.}},
+\bauthor{\bsnm{Gilliland}, \binits{G.}},
+\bauthor{\bsnm{Bhat}, \binits{T.N.}},
+\bauthor{\bsnm{Weissig}, \binits{H.}},
+\bauthor{\bsnm{Shindyalov}, \binits{I.N.}},
+\bauthor{\bsnm{Bourne}, \binits{P.E.}}:
+\batitle{{The Protein Data Bank}}.
+\bjtitle{Nucleic Acids Research}
+\bvolume{28}(\bissue{1}),
+\bfpage{235}--\blpage{242}
+(\byear{2000})
+\doiurl{10.1093/nar/28.1.235}
+{\href{https://arxiv.org/abs/https://academic.oup.com/nar/article-pdf/28/1/235/9895144/280235.pdf}{{https://academic.oup.com/nar/article-pdf/28/1/235/9895144/280235.pdf}}}
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Carlson
+  et~al.}{2010}]{Carlson_Betteridge_Kisiel_Settles_Hruschka_Mitchell_2010}
+\begin{barticle}
+\bauthor{\bsnm{Carlson}, \binits{A.}},
+\bauthor{\bsnm{Betteridge}, \binits{J.}},
+\bauthor{\bsnm{Kisiel}, \binits{B.}},
+\bauthor{\bsnm{Settles}, \binits{B.}},
+\bauthor{\bsnm{Hruschka}, \binits{E.}},
+\bauthor{\bsnm{Mitchell}, \binits{T.}}:
+\batitle{Toward an architecture for never-ending language learning}.
+\bjtitle{Proceedings of the AAAI Conference on Artificial Intelligence}
+\bvolume{24}(\bissue{1}),
+\bfpage{1306}--\blpage{1313}
+(\byear{2010})
+\doiurl{10.1609/aaai.v24i1.7519}
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Borgwardt
+  et~al.}{2005}]{10.1093/bioinformatics/bti1007}
+\begin{barticle}
+\bauthor{\bsnm{Borgwardt}, \binits{K.M.}},
+\bauthor{\bsnm{Ong}, \binits{C.S.}},
+\bauthor{\bsnm{Schönauer}, \binits{S.}},
+\bauthor{\bsnm{Vishwanathan}, \binits{S.V.N.}},
+\bauthor{\bsnm{Smola}, \binits{A.J.}},
+\bauthor{\bsnm{Kriegel}, \binits{H.-P.}}:
+\batitle{{Protein function prediction via graph kernels}}.
+\bjtitle{Bioinformatics}
+\bvolume{21}(\bissue{suppl\_1}),
+\bfpage{47}--\blpage{56}
+(\byear{2005})
+\doiurl{10.1093/bioinformatics/bti1007}
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Kapoor and
+  Narayanan}{2023}]{kapoor2023leakage}
+\begin{barticle}
+\bauthor{\bsnm{Kapoor}, \binits{S.}},
+\bauthor{\bsnm{Narayanan}, \binits{A.}}:
+\batitle{Leakage and the reproducibility crisis in machine-learning-based
+  science}.
+\bjtitle{Patterns}
+\bvolume{4}(\bissue{9}),
+\bfpage{100804}
+(\byear{2023})
+\end{barticle}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Wang et~al.}{2016}]{deepcnf}
+\begin{barticle}
+\bauthor{\bsnm{Wang}, \binits{S.}},
+\bauthor{\bsnm{Peng}, \binits{J.}},
+\bauthor{\bsnm{Ma}, \binits{J.}},
+\bauthor{\bsnm{Xu}, \binits{J.}}:
+\batitle{Protein secondary structure prediction using deep convolutional neural
+  fields}.
+\bjtitle{Scientific Reports}
+\bvolume{6}(\bissue{1}),
+\bfpage{18962}
+(\byear{2016})
+\doiurl{10.1038/srep18962}
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Drozdetskiy et~al.}{2015}]{jpred}
+\begin{barticle}
+\bauthor{\bsnm{Drozdetskiy}, \binits{A.}},
+\bauthor{\bsnm{Cole}, \binits{C.}},
+\bauthor{\bsnm{Procter}, \binits{J.}},
+\bauthor{\bsnm{Barton}, \binits{G.J.}}:
+\batitle{{JPred4: a protein secondary structure prediction server}}.
+\bjtitle{Nucleic Acids Research}
+\bvolume{43}(\bissue{W1}),
+\bfpage{389}--\blpage{394}
+(\byear{2015})
+\doiurl{10.1093/nar/gkv332}
+{\href{https://arxiv.org/abs/https://academic.oup.com/nar/article-pdf/43/W1/W389/7476047/gkv332.pdf}{{https://academic.oup.com/nar/article-pdf/43/W1/W389/7476047/gkv332.pdf}}}
+\end{barticle}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Ismi et~al.}{2022}]{pssp}
+\begin{barticle}
+\bauthor{\bsnm{Ismi}, \binits{D.P.}},
+\bauthor{\bsnm{Pulungan}, \binits{R.}},
+\bauthor{\bsnm{Afiahayati}}:
+\batitle{Deep learning for protein secondary structure prediction: Pre and
+  post-alphafold}.
+\bjtitle{Computational and Structural Biotechnology Journal}
+\bvolume{20},
+\bfpage{6271}--\blpage{6286}
+(\byear{2022})
+\doiurl{10.1016/j.csbj.2022.11.012}
+\end{barticle}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Nahid et~al.}{2021}]{pssgnn}
+\begin{bchapter}
+\bauthor{\bsnm{Nahid}, \binits{T.H.}},
+\bauthor{\bsnm{Jui}, \binits{F.A.}},
+\bauthor{\bsnm{Shill}, \binits{P.C.}}:
+\bctitle{Protein secondary structure prediction using graph neural network}.
+In: \bbtitle{2021 5th International Conference on Electrical Information and
+  Communication Technology (EICT)},
+pp. \bfpage{1}--\blpage{6}
+(\byear{2021}).
+\doiurl{10.1109/EICT54103.2021.9733590}
+\end{bchapter}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Labesse et~al.}{1997}]{labesse1997psea}
+\begin{barticle}
+\bauthor{\bsnm{Labesse}, \binits{G.}},
+\bauthor{\bsnm{Colloc'h}, \binits{N.}},
+\bauthor{\bsnm{Pothier}, \binits{J.}},
+\bauthor{\bsnm{Mornon}, \binits{J.-P.}}:
+\batitle{{P-SEA}: a new efficient assignment of secondary structure from
+  {C}$\alpha$ trace of proteins}.
+\bjtitle{Computer Applications in the Biosciences}
+\bvolume{13}(\bissue{3}),
+\bfpage{291}--\blpage{295}
+(\byear{1997})
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Law et~al.}{2014}]{law2014pcasso}
+\begin{barticle}
+\bauthor{\bsnm{Law}, \binits{S.M.}},
+\bauthor{\bsnm{Frank}, \binits{A.T.}},
+\bauthor{\bsnm{Brooks}, \binits{C.L.}}:
+\batitle{{PCASSO}: a fast and efficient {C}$\alpha$-based method for accurately
+  assigning protein secondary structure elements}.
+\bjtitle{Journal of Computational Chemistry}
+\bvolume{35}(\bissue{24}),
+\bfpage{1757}--\blpage{1761}
+(\byear{2014})
+\end{barticle}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Kabsch and Sander}{1983}]{dssp}
+\begin{barticle}
+\bauthor{\bsnm{Kabsch}, \binits{W.}},
+\bauthor{\bsnm{Sander}, \binits{C.}}:
+\batitle{Dictionary of protein secondary structure: Pattern recognition of
+  hydrogen-bonded and geometrical features}.
+\bjtitle{Biopolymers}
+\bvolume{22}(\bissue{12}),
+\bfpage{2577}--\blpage{2637}
+(\byear{1983})
+\doiurl{10.1002/bip.360221211}
+{\href{https://arxiv.org/abs/https://onlinelibrary.wiley.com/doi/pdf/10.1002/bip.360221211}{{https://onlinelibrary.wiley.com/doi/pdf/10.1002/bip.360221211}}}
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{Pauling et~al.}{1951}]{pauling1951structure}
+\begin{barticle}
+\bauthor{\bsnm{Pauling}, \binits{L.}},
+\bauthor{\bsnm{Corey}, \binits{R.B.}},
+\bauthor{\bsnm{Branson}, \binits{H.R.}}:
+\batitle{The structure of proteins: two hydrogen-bonded helical configurations
+  of the polypeptide chain}.
+\bjtitle{Proceedings of the National Academy of Sciences}
+\bvolume{37}(\bissue{4}),
+\bfpage{205}--\blpage{211}
+(\byear{1951})
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem[\protect\citeauthoryear{Park et~al.}{2000}]{park2000toward}
+\begin{barticle}
+\bauthor{\bsnm{Park}, \binits{K.}},
+\bauthor{\bsnm{Vendruscolo}, \binits{M.}},
+\bauthor{\bsnm{Domany}, \binits{E.}}:
+\batitle{Toward an energy function for the contact map representation of
+  proteins}.
+\bjtitle{Proteins: Structure, Function, and Bioinformatics}
+\bvolume{40}(\bissue{2}),
+\bfpage{237}--\blpage{248}
+(\byear{2000})
+\end{barticle}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{Gligorijevi{\'c} et~al.}{2021}]{gnn-prot}
+\begin{barticle}
+\bauthor{\bsnm{Gligorijevi{\'c}}, \binits{V.}},
+\bauthor{\bsnm{Renfrew}, \binits{P.D.}},
+\bauthor{\bsnm{Kosciolek}, \binits{T.}},
+\bauthor{\bsnm{Leman}, \binits{J.K.}},
+\bauthor{\bsnm{Berenberg}, \binits{D.}},
+\bauthor{\bsnm{Vatanen}, \binits{T.}},
+\bauthor{\bsnm{Chandler}, \binits{C.}},
+\bauthor{\bsnm{Taylor}, \binits{B.C.}},
+\bauthor{\bsnm{Fisk}, \binits{I.M.}},
+\bauthor{\bsnm{Vlamakis}, \binits{H.}},
+\bauthor{\bsnm{Xavier}, \binits{R.J.}},
+\bauthor{\bsnm{Knight}, \binits{R.}},
+\bauthor{\bsnm{Cho}, \binits{K.}},
+\bauthor{\bsnm{Bonneau}, \binits{R.}}:
+\batitle{Structure-based protein function prediction using graph convolutional
+  networks}.
+\bjtitle{Nature Communications}
+\bvolume{12}(\bissue{1}),
+\bfpage{3168}
+(\byear{2021})
+\doiurl{10.1038/s41467-021-23303-9}
+\end{barticle}
+\endbibitem
+
+%%% 20
+\bibitem[\protect\citeauthoryear{Steinegger and
+  S{\"o}ding}{2017}]{steinegger2017mmseqs2}
+\begin{barticle}
+\bauthor{\bsnm{Steinegger}, \binits{M.}},
+\bauthor{\bsnm{S{\"o}ding}, \binits{J.}}:
+\batitle{{MMseqs2} enables sensitive protein sequence searching for the
+  analysis of massive data sets}.
+\bjtitle{Nature Biotechnology}
+\bvolume{35}(\bissue{11}),
+\bfpage{1026}--\blpage{1028}
+(\byear{2017})
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem[\protect\citeauthoryear{Rost}{1999}]{rost1999twilight}
+\begin{barticle}
+\bauthor{\bsnm{Rost}, \binits{B.}}:
+\batitle{Twilight zone of protein sequence alignments}.
+\bjtitle{Protein Engineering}
+\bvolume{12}(\bissue{2}),
+\bfpage{85}--\blpage{94}
+(\byear{1999})
+\end{barticle}
+\endbibitem
+
+%%% 22
+\bibitem[\protect\citeauthoryear{Kipf and
+  Welling}{2017}]{kipf2017semisupervised}
+\begin{botherref}
+\oauthor{\bsnm{Kipf}, \binits{T.N.}},
+\oauthor{\bsnm{Welling}, \binits{M.}}:
+Semi-Supervised Classification with Graph Convolutional Networks
+(2017)
+\end{botherref}
+\endbibitem
+
+%%% 23
+\bibitem[\protect\citeauthoryear{Xu et~al.}{2019}]{xu2019powerful}
+\begin{botherref}
+\oauthor{\bsnm{Xu}, \binits{K.}},
+\oauthor{\bsnm{Hu}, \binits{W.}},
+\oauthor{\bsnm{Leskovec}, \binits{J.}},
+\oauthor{\bsnm{Jegelka}, \binits{S.}}:
+How Powerful are Graph Neural Networks?
+(2019)
+\end{botherref}
+\endbibitem
+
+%%% 24
+\bibitem[\protect\citeauthoryear{Veličković
+  et~al.}{2018}]{veličković2018graph}
+\begin{botherref}
+\oauthor{\bsnm{Veličković}, \binits{P.}},
+\oauthor{\bsnm{Cucurull}, \binits{G.}},
+\oauthor{\bsnm{Casanova}, \binits{A.}},
+\oauthor{\bsnm{Romero}, \binits{A.}},
+\oauthor{\bsnm{Liò}, \binits{P.}},
+\oauthor{\bsnm{Bengio}, \binits{Y.}}:
+Graph Attention Networks
+(2018)
+\end{botherref}
+\endbibitem
+
+%%% 25
+\bibitem[\protect\citeauthoryear{Brody
+  et~al.}{2022}]{brody2022attentivegraphattentionnetworks}
+\begin{botherref}
+\oauthor{\bsnm{Brody}, \binits{S.}},
+\oauthor{\bsnm{Alon}, \binits{U.}},
+\oauthor{\bsnm{Yahav}, \binits{E.}}:
+How Attentive are Graph Attention Networks?
+(2022).
+\url{https://arxiv.org/abs/2105.14491}
+\end{botherref}
+\endbibitem
+
+%%% 26
+\bibitem[\protect\citeauthoryear{Hashemi and Makse}{2024}]{hashemi2024visiting}
+\begin{botherref}
+\oauthor{\bsnm{Hashemi}, \binits{A.}},
+\oauthor{\bsnm{Makse}, \binits{H.}}:
+Visiting Distant Neighbors in Graph Convolutional Networks
+(2024)
+\end{botherref}
+\endbibitem
+
+%%% 27
+\bibitem[\protect\citeauthoryear{Kingma and
+  Ba}{2017}]{kingma2017adammethodstochasticoptimization}
+\begin{botherref}
+\oauthor{\bsnm{Kingma}, \binits{D.P.}},
+\oauthor{\bsnm{Ba}, \binits{J.}}:
+Adam: A Method for Stochastic Optimization
+(2017).
+\url{https://arxiv.org/abs/1412.6980}
+\end{botherref}
+\endbibitem
+
+%%% 28
+\bibitem[\protect\citeauthoryear{Loshchilov and
+  Hutter}{2017}]{loshchilov2017sgdrstochasticgradientdescent}
+\begin{botherref}
+\oauthor{\bsnm{Loshchilov}, \binits{I.}},
+\oauthor{\bsnm{Hutter}, \binits{F.}}:
+SGDR: Stochastic Gradient Descent with Warm Restarts
+(2017).
+\url{https://arxiv.org/abs/1608.03983}
+\end{botherref}
+\endbibitem
+
+%%% 29
+\bibitem[\protect\citeauthoryear{Paszke et~al.}{2019}]{paszke2019pytorch}
+\begin{botherref}
+\oauthor{\bsnm{Paszke}, \binits{A.}},
+\oauthor{\bsnm{Gross}, \binits{S.}},
+\oauthor{\bsnm{Massa}, \binits{F.}},
+\oauthor{\bsnm{Lerer}, \binits{A.}},
+\oauthor{\bsnm{Bradbury}, \binits{J.}},
+\oauthor{\bsnm{Chanan}, \binits{G.}},
+\oauthor{\bsnm{Killeen}, \binits{T.}},
+\oauthor{\bsnm{Lin}, \binits{Z.}},
+\oauthor{\bsnm{Gimelshein}, \binits{N.}},
+\oauthor{\bsnm{Antiga}, \binits{L.}},
+\oauthor{\bsnm{Desmaison}, \binits{A.}},
+\oauthor{\bsnm{Kopf}, \binits{A.}},
+\oauthor{\bsnm{Yang}, \binits{E.}},
+\oauthor{\bsnm{DeVito}, \binits{Z.}},
+\oauthor{\bsnm{Raison}, \binits{M.}},
+\oauthor{\bsnm{Tejani}, \binits{A.}},
+\oauthor{\bsnm{Chilamkurthy}, \binits{S.}},
+\oauthor{\bsnm{Steiner}, \binits{B.}},
+\oauthor{\bsnm{Fang}, \binits{L.}},
+\oauthor{\bsnm{Bai}, \binits{J.}},
+\oauthor{\bsnm{Chintala}, \binits{S.}}:
+Pytorch: An imperative style, high-performance deep learning library.
+arXiv preprint arXiv:1912.01703
+(2019)
+\end{botherref}
+\endbibitem
+
+%%% 30
+\bibitem[\protect\citeauthoryear{Pedregosa et~al.}{2011}]{pedregosa2011sklearn}
+\begin{barticle}
+\bauthor{\bsnm{Pedregosa}, \binits{F.}}, \betal:
+\batitle{Scikit-learn: Machine learning in {P}ython}.
+\bjtitle{Journal of Machine Learning Research}
+\bvolume{12},
+\bfpage{2825}--\blpage{2830}
+(\byear{2011})
+\end{barticle}
+\endbibitem
+
+%%% 31
+\bibitem[\protect\citeauthoryear{Tang and Liu}{2011}]{sc}
+\begin{barticle}
+\bauthor{\bsnm{Tang}, \binits{L.}},
+\bauthor{\bsnm{Liu}, \binits{H.}}:
+\batitle{Leveraging social media networks for classification}.
+\bjtitle{Data Mining and Knowledge Discovery}
+\bvolume{23}(\bissue{3}),
+\bfpage{447}--\blpage{478}
+(\byear{2011})
+\doiurl{10.1007/s10618-010-0210-x}
+\end{barticle}
+\endbibitem
+
+%%% 32
+\bibitem[\protect\citeauthoryear{Kuhn}{1955}]{kuhn}
+\begin{barticle}
+\bauthor{\bsnm{Kuhn}, \binits{H.W.}}:
+\batitle{The hungarian method for the assignment problem}.
+\bjtitle{Naval Research Logistics Quarterly}
+\bvolume{2}(\bissue{1-2}),
+\bfpage{83}--\blpage{97}
+(\byear{1955})
+\doiurl{10.1002/nav.3800020109}
+{\href{https://arxiv.org/abs/https://onlinelibrary.wiley.com/doi/pdf/10.1002/nav.3800020109}{{https://onlinelibrary.wiley.com/doi/pdf/10.1002/nav.3800020109}}}
+\end{barticle}
+\endbibitem
+
+%%% 33
+\bibitem[\protect\citeauthoryear{Vendruscolo
+  et~al.}{1997}]{vendruscolo1997recovery}
+\begin{barticle}
+\bauthor{\bsnm{Vendruscolo}, \binits{M.}},
+\bauthor{\bsnm{Kussell}, \binits{E.}},
+\bauthor{\bsnm{Domany}, \binits{E.}}:
+\batitle{Recovery of protein structure from contact maps}.
+\bjtitle{Folding and Design}
+\bvolume{2}(\bissue{5}),
+\bfpage{295}--\blpage{306}
+(\byear{1997})
+\end{barticle}
+\endbibitem
+
+%%% 34
+\bibitem[\protect\citeauthoryear{Morcos et~al.}{2011}]{morcos2011direct}
+\begin{barticle}
+\bauthor{\bsnm{Morcos}, \binits{F.}}, \betal:
+\batitle{Direct-coupling analysis of residue coevolution captures native
+  contacts across many protein families}.
+\bjtitle{Proceedings of the National Academy of Sciences}
+\bvolume{108}(\bissue{49}),
+\bfpage{1293}--\blpage{1301}
+(\byear{2011})
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}

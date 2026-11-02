@@ -1,0 +1,17 @@
+# data and outputs (large, regenerable)
+data/*
+!data/splits/
+runs/
+logs/
+*.npz
+*.pt
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
